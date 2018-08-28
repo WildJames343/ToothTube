@@ -67,10 +67,10 @@ def use_ID(ID, key):
     # If the video is about 2 minutes long, open it
     if duration > 110 and duration < 130:
         videoURL = 'https://www.youtube.com/watch?v='+ID
-        # webbrowser.open_new_tab(videoURL)
-        with open('database', 'a') as f:
-            f.write('{}\n'.format(ID))
-        print('Wrote ID, [{}] to file.'.format(ID))
+        webbrowser.open_new_tab(videoURL)
+        # with open('database', 'a') as f:
+        #     f.write('{}\n'.format(ID))
+        # print('Wrote ID, [{}] to file.'.format(ID))
         return True
 
     return False
