@@ -62,12 +62,15 @@ def use_ID(ID, key):
 
     duration = results['items'][0]['contentDetails']['duration']
     duration = parse_duration(duration)
-    print('Found a video %d seconds long.' % duration)
+    # print('Found a video %d seconds long.' % duration)
 
     # If the video is about 2 minutes long, open it
     if duration > 110 and duration < 130:
         videoURL = 'https://www.youtube.com/watch?v='+ID
-        webbrowser.open_new_tab(videoURL)
+        # webbrowser.open_new_tab(videoURL)
+        with open('database', 'a') as f:
+            f.write('{}\n'.format(ID))
+        print('Wrote ID, [{}] to file.'.format(ID))
         return True
 
     return False
@@ -131,5 +134,6 @@ while cont:
         cont = use_ID(videoID, API_KEY)
         cont = not cont
     except:
+        pass
         print("Didn't get a response")
 
