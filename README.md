@@ -3,6 +3,8 @@
 ## Pre-requisites
 `pip install --user --upgrade google-api-python-client`
 
+`pip install --user --upgrade google-auth google-auth-oauthlib google-auth-httplib2`
+
 You also need to enable the youtube API. From Google's documentation: 
 - Use this [wizard](https://console.developers.google.com/start/api?id=youtube) to create or select a project in the Google Developers Console and automatically turn on the API. Click Continue, then Go to credentials.
 - On the Add credentials to your project page, click the Cancel button.
