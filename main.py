@@ -80,10 +80,8 @@ def use_ID(ID, key):
 
 ## MAIN ###
 count = 50
-with open('api_key.json', 'r') as f:
-    API_KEY = json.load(f)
-API_KEY = API_KEY['api_key']
-print(API_KEY)
+with open('api_key.txt', 'r') as f:
+    API_KEY = f.readline().strip()
 cont = False
 
 which = 0 
@@ -91,6 +89,8 @@ which = 0
 # 1 - randomly generated string, repeated searches until matched to ID
 # 2 - randomly generated IDs, until one matches.
 # 3 - randomyoutube.net API 
+
+
 
 ## Different styles...
 
